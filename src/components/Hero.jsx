@@ -2,6 +2,7 @@
 
 import { ArrowRight, Play } from 'lucide-react';
 import FeatureHighlights from './FeatureHighlights';
+import Image from 'next/image';
 
 export default function Hero({ onBookClick }) {
   return (
@@ -34,7 +35,7 @@ export default function Hero({ onBookClick }) {
               {/* Primary CTA */}
               <button
                 onClick={onBookClick}
-                className="flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#FF1E36] hover:bg-[#E01B32] text-white font-semibold text-base shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/35 transition-all active:scale-[0.98]"
+                className="flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#FF1E36] hover:bg-[#E01B32] text-white font-semibold text-base shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/35 transition-all active:scale-[0.98] cursor-pointer"
               >
                 <span>Book Your Ride</span>
                 <ArrowRight className="w-5 h-5" />
@@ -43,7 +44,7 @@ export default function Hero({ onBookClick }) {
               {/* Video Play CTA */}
               <button
                 onClick={() => alert("Watch RYPP introduction video")}
-                className="flex items-center gap-3 px-4 py-2 rounded-full hover:bg-gray-100/80 transition-colors group"
+                className="flex items-center gap-3 px-4 py-2 rounded-full hover:bg-gray-100/80 transition-colors group cursor-pointer"
               >
                 <div className="w-11 h-11 rounded-full bg-[#FF1E36] text-white flex items-center justify-center shadow-md shadow-red-500/20 group-hover:scale-105 transition-transform">
                   <Play className="w-5 h-5 fill-white translate-x-0.5" />
@@ -65,9 +66,11 @@ export default function Hero({ onBookClick }) {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-md overflow-hidden shadow-2xl border border-gray-100 aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] group">
               {/* Hero Background Image */}
-              <img
-                src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=1200"
+              <Image
+                src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc"
                 alt="RYPP Adventure Bike and Car rental on scenic mountain road"
+                width={200}
+                height={200}
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
 

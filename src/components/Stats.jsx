@@ -32,7 +32,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-8 bg-white">
+    <section className=" bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="w-full bg-white rounded-2xl border border-gray-100 p-6 sm:p-8 shadow-lg shadow-gray-100/80">

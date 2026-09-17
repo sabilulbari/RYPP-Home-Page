@@ -1,12 +1,16 @@
 'use client';
 
+import Image from "next/image";
+
 export default function DestinationCard({ destination }) {
   return (
-    <div className="group relative h-48 sm:h-56 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+    <div className="group relative h-48 sm:h-56 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
       {/* Background Image */}
-      <img
+      <Image
         src={destination.image}
         alt={destination.name}
+        height={100}
+        width={100}
         className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
       />
 

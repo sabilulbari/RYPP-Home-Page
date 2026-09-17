@@ -5,22 +5,22 @@ import { ArrowRight } from 'lucide-react';
 export default function RideCategories({ onCategorySelect }) {
   const categories = [
     {
-      id: 'bikes',
-      title: 'Bikes',
-      subtitle: 'For every adventure',
-      image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=800',
+      id: "bikes",
+      title: "Bikes",
+      subtitle: "For every adventure",
+      image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=800",
     },
     {
-      id: 'scooters',
-      title: 'Scooters',
-      subtitle: 'Simple. Smart. Reliable.',
-      image: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&q=80&w=800',
+      id: "scooters",
+      title: "Scooters",
+      subtitle: "Simple. Smart. Reliable.",
+      image: "https://imgcdn.zigwheels.my/medium/gallery/exterior/184/2573/moda-sporter-s-74313.jpg?auto=format&fit=crop&q=80&w=800",
     },
     {
-      id: 'cars',
-      title: 'Cars',
-      subtitle: 'For every journey',
-      image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800',
+      id: "cars",
+      title: "Cars",
+      subtitle: "For every journey",
+      image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800",
     },
   ];
 
@@ -47,7 +47,7 @@ export default function RideCategories({ onCategorySelect }) {
             <div
               key={category.id}
               onClick={() => onCategorySelect && onCategorySelect(category.id)}
-              className="group relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group relative h-64 sm:h-72 lg:h-80 rounded-lg overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               {/* Background Image */}
               <img
@@ -71,7 +71,7 @@ export default function RideCategories({ onCategorySelect }) {
                 </div>
 
                 {/* White Arrow Button */}
-                <div className="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center group-hover:bg-[#FF1E36] group-hover:text-white transition-colors duration-300 shadow-lg shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-white text-gray-900 flex items-center justify-center group-hover:bg-[#FF1E36] group-hover:text-white transition-colors duration-300 shadow-lg shrink-0">
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { vehicles } from '../../public/data/vehicles';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import RideCategories from '@/components/RideCategories';
@@ -14,7 +15,6 @@ import Stats from '@/components/Stats';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
-import { vehicles } from '@/data/vehicles';
 
 export default function Home() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -78,7 +78,6 @@ export default function Home() {
 
       {/* 12. Footer */}
       <Footer />
-
       {/* 13. Interactive Booking Modal */}
       <BookingModal
         isOpen={isBookingModalOpen}

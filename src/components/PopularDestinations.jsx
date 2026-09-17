@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import { destinations } from '@/data/destinations';
+import { destinations } from '../../public/data/destinations';
 import DestinationCard from './DestinationCard';
 
 export default function PopularDestinations() {

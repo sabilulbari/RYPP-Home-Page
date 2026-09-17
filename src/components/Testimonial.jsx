@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Vision from './Vision';
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Vision from "./Vision";
+import Image from "next/image";
 
 export default function Testimonial() {
   const testimonials = [
@@ -42,48 +43,39 @@ export default function Testimonial() {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="py-12 lg:py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    <section className="py-12 lg:pt-16 lg:pb-8  bg-white">
+      <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          
           {/* Left Column: What Our Riders Say (Red Card) */}
-          <div className="rounded-3xl bg-[#FF1E36] p-8 sm:p-10 lg:p-12 text-white flex flex-col justify-between shadow-xl">
-            
+          <div className="relative rounded-lg overflow-hidden bg-red-900 p-8 sm:p-10 lg:p-12 min-h-[380px] flex flex-col justify-between shadow-xl border border-gray-800 group">
+            {/* Background Image */}
+            <Image
+              src="https://img.magnific.com/free-photo/sunset-mountain-range-rural-country-road-generated-by-ai_188544-44739.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Mountain highway vision"
+              height={100}
+              width={150}
+              className="absolute inset-0 w-full h-full object-cover object-center opacity-50 group-hover:scale-105 transition-transform duration-700"
+            />
             {/* Header */}
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-                What Our Riders Say
-              </h2>
-              <p className="mt-1 text-sm sm:text-base text-red-100 font-medium">
-                Real people. Real journeys. Real freedom.
-              </p>
+            <div className="relative z-10 max-w-lg">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">What Our Riders Say</h3>
+
+              <p className="mt-4 text-sm sm:text-base text-gray-100 font-normal leading-relaxed">Real people. Real journeys. Real freedom.</p>
             </div>
 
             {/* White Quote Card Container */}
             <div className="my-8 bg-white rounded-2xl p-6 sm:p-8 text-gray-900 shadow-lg relative min-h-[180px] flex flex-col justify-between">
-              
               {/* Quote Text */}
-              <p className="text-sm sm:text-base font-semibold italic text-gray-800 leading-relaxed">
-                "{current.quote}"
-              </p>
+              <p className="text-sm sm:text-base font-semibold italic text-gray-800 leading-relaxed">"{current.quote}"</p>
 
               {/* Author & Slider Navigation Row */}
               <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
                 {/* Author Info */}
                 <div className="flex items-center gap-3">
-                  <img
-                    src={current.avatar}
-                    alt={current.name}
-                    className="w-10 h-10 rounded-full object-cover border-2 border-red-100"
-                  />
+                  <img src={current.avatar} alt={current.name} className="w-10 h-10 rounded-full object-cover border-2 border-red-100" />
                   <div>
-                    <h4 className="text-sm font-bold text-gray-900 leading-tight">
-                      {current.name}
-                    </h4>
-                    <p className="text-xs text-gray-500 font-medium leading-tight">
-                      {current.role}
-                    </p>
+                    <h4 className="text-sm font-bold text-gray-900 leading-tight">{current.name}</h4>
+                    <p className="text-xs text-gray-500 font-medium leading-tight">{current.role}</p>
                   </div>
                 </div>
 
@@ -105,7 +97,6 @@ export default function Testimonial() {
                   </button>
                 </div>
               </div>
-
             </div>
 
             {/* Pagination Dots */}
@@ -114,23 +105,16 @@ export default function Testimonial() {
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`h-2 rounded-full transition-all ${
-                    idx === currentIndex
-                      ? 'w-6 bg-white'
-                      : 'w-2 bg-red-300 hover:bg-white/80'
-                  }`}
+                  className={`h-2 rounded-full transition-all ${idx === currentIndex ? "w-6 bg-white" : "w-2 bg-red-300 hover:bg-white/80"}`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
               ))}
             </div>
-
           </div>
 
           {/* Right Column: Our Vision (Dark Card) */}
           <Vision />
-
         </div>
-
       </div>
     </section>
   );

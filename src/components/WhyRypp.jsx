@@ -43,13 +43,13 @@ export default function WhyRypp() {
             </p>
 
             {/* 2x2 Feature Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-8">
               {features.map((item, idx) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={idx}
-                    className="p-5 rounded-2xl bg-gray-50/70 border border-gray-100 hover:bg-white hover:shadow-md transition-all duration-300"
+                    className="p-5 rounded-lg bg-gray-50/70 border border-gray-100 hover:bg-white hover:shadow-md transition-all duration-300"
                   >
                     <div className="w-12 h-12 rounded-xl bg-red-50 text-[#FF1E36] flex items-center justify-center mb-4">
                       <Icon className="w-6 h-6" />
